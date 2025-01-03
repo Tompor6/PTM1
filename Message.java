@@ -9,15 +9,15 @@ public class Message {
     public final Date date;
 
 
-    public Message(byte[] data) {
-        this.data = data;
-        this.asText = data.toString();
+    public Message(String asText) {
+        this.data = asText.getBytes();
+        this.asText = asText;
         this.asDouble = tryParse(this.asText);
         this.date = new Date();
     }
 
-    public Message(String asText){
-        this(asText.getBytes());
+    public Message(byte[] data){
+        this(new String(data)) ;
     }
 
     public Message(double asDouble){

@@ -13,9 +13,9 @@ public class TopicManagerSingleton {
     }
 
     public static class TopicManager{
-        private TopicManager(){};
+        private TopicManager(){}
 
-        private Map<String, Topic> topics = new HashMap<String, Topic>();
+        private Map<String, Topic> topics = new HashMap<>();
 
         private static final TopicManager instance = new TopicManager();
 

@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Topic {
+public class Topic{
     public final String name;
     Topic(String name){
         this.name=name;
     }
-    LinkedList<Agent> subs = new LinkedList<>();
-    LinkedList<Agent> pubs = new LinkedList<>();
+    List<Agent> subs = new LinkedList<>();
+    List<Agent> pubs = new LinkedList<>();
 
     public void subscribe(Agent a){
         subs.add(a);
